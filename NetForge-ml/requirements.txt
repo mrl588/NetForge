@@ -1,0 +1,7 @@
+pandas
+numpy
+scikit-learn
+xgboost
+skl2onnx # coverts scikit models to ONNX
+onnxmltools #conert other models to ONNX
+onnxruntime # runs the onnx models
