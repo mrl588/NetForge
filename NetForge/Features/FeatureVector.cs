@@ -14,6 +14,11 @@ class FeatureVector
     public double BytesPerSecond { get; }
     public double AvgPacketSize { get; }
 
+    public int FinCount { get; }
+    public double SynRatio { get; }
+    public double RstRatio { get; }
+
+
     public FeatureVector(FlowKey key, Flow flow)
     {
         SrcIP = key.srcIP;
@@ -29,5 +34,8 @@ class FeatureVector
         PacketsPerSecond = flow.PacketsPerSecond;
         BytesPerSecond = flow.BytesPerSecond;
         AvgPacketSize = flow.AvgPacketSize;
+        FinCount = flow.FINCount;
+        SynRatio = flow.SynRatio;
+        RstRatio = flow.RstRatio;
     }
 }

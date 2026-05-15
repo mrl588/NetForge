@@ -4,3 +4,7 @@
 
 # Local generated data
 NetForge/flows.csv
+
+# CICIDS datasets (too large for git)
+NetForge-ml/data/MachineLearningCVE/
+NetForge-ml/data/cicids_netforge_features.csv

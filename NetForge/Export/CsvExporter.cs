@@ -8,10 +8,10 @@ class CsvExporter{
         var lines = new List<string>();
 
         //header line 
-        lines.Add("SrcIP,DstIP,SrcPort,DstPort,Protocol,Duration,PacketCount,ByteCount,SynCount,RstCount,PacketsPerSecond,BytesPerSecond,AvgPacketSize");
+        lines.Add("SrcIP,DstIP,SrcPort,DstPort,Protocol,Duration,PacketCount,ByteCount,SynCount,RstCount,FinCount,SynRatio,RstRatio,PacketsPerSecond,BytesPerSecond,AvgPacketSize");
         foreach (var fv in _features)
     {
-        lines.Add($"{fv.SrcIP},{fv.DstIP},{fv.SrcPort},{fv.DstPort},{fv.Protocol},{fv.Duration},{fv.PacketCount},{fv.ByteCount},{fv.SynCount},{fv.RstCount},{fv.PacketsPerSecond},{fv.BytesPerSecond},{fv.AvgPacketSize}");
+        lines.Add($"{fv.SrcIP},{fv.DstIP},{fv.SrcPort},{fv.DstPort},{fv.Protocol},{fv.Duration},{fv.PacketCount},{fv.ByteCount},{fv.SynCount},{fv.RstCount},{fv.FinCount},{fv.SynRatio},{fv.RstRatio},{fv.PacketsPerSecond},{fv.BytesPerSecond},{fv.AvgPacketSize}");
     }
     
     File.WriteAllLines(filePath, lines);

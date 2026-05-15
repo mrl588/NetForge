@@ -34,6 +34,7 @@ class Flow{
     public double PacketsPerSecond => DurationSeconds > 0 ? PacketCount / DurationSeconds : 0;
     public double BytesPerSecond => DurationSeconds > 0 ? ByteCount / DurationSeconds : 0;
     public double SynRatio => PacketCount > 0 ? (double)SYNCount / PacketCount : 0;
+    public double RstRatio => PacketCount > 0 ? (double)RSTCount / PacketCount : 0;
     public double AvgPacketSize => PacketCount > 0 ? (double)ByteCount / PacketCount : 0;
 
 }
